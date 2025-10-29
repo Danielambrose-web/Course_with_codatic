@@ -16,24 +16,29 @@
   </head>
 
   <body>
-    <header>
+    <header id="header">
       <div>
         <h1 class="logo">Daniel</h1>
       </div>
+
+<div class="hamburger" id="hamburger">
+  <i class="fa-solid fa-bars"></i>
+</div>
+
       <nav>
         <a href="#">Portfolio</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-        <a href=""><i class="fa-solid fa-envelope"></i></a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="mailto:danielessientech121@gmail.com"><i class="fa-solid fa-envelope"></i></a>
       </nav>
     </header>
 
-    <main class="hero">
+    <main class="hero" id="">
       <div class="socials">
-        <a href="#"><i class="fab fa-github"></i></a>
-        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-medium-m"></i></a>
+        <a href="https://github.com/Danielambrose-web" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/daniel-essien-96359b376/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://x.com/DanielAmbrose50/status/1980429757167833353?t=7MbeYqZvGG26v2wf-daHPg&s=19" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.tiktok.com/explore" target="_blank"><i class="fab fa-tiktok"></i></a>
       </div>
 
       <div class="hero-content">
@@ -183,7 +188,7 @@
       </div>
     </section>
 
-    <section class="about-section">
+    <section class="about-section" id="about">
       <div class="about-container">
         <div class="about-text">
           <h2>About me</h2>
@@ -246,7 +251,7 @@
       </div>
     </section>
 
-    <section class="contact-section">
+    <section class="contact-section" id="contact">
       <div class="contact-container">
         <div class="contact-text">
           <h2>
@@ -277,5 +282,24 @@
       <a class="social-btn" href="#"><i class="fab fa-twitter"></i></a>
       <a class="social-btn" href="#"><i class="fab fa-medium-m"></i></a>
     </section>
+
+
+    <script>
+      const hamburger = document.getElementById('hamburger');
+const nav = document.querySelector('header nav');
+const icon = hamburger.querySelector('i');
+
+hamburger.addEventListener('click', () => {
+  nav.classList.toggle('active');
+
+  // Toggle the icon
+  if (icon.classList.contains('fa-bars')) {
+    icon.classList.replace('fa-bars', 'fa-xmark');
+  } else {
+    icon.classList.replace('fa-xmark', 'fa-bars');
+  }
+});
+
+    </script>
   </body>
 </html>
