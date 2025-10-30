@@ -21,7 +21,7 @@
         <h1 class="logo">Daniel</h1>
       </div>
 
-<div class="hamburger" id="hamburger">
+<div class="hamburger" id="hamburger-el">
   <i class="fa-solid fa-bars"></i>
 </div>
 
@@ -285,19 +285,17 @@
 
 
     <script>
-      const hamburger = document.getElementById('hamburger');
-const nav = document.querySelector('header nav');
-const icon = hamburger.querySelector('i');
+      const hamburgerEL = document.getElementById('hamburger-el');
+const navEL = document.querySelector('header nav');
+const iconEl = hamburgerEL.querySelector('i');
 
-hamburger.addEventListener('click', () => {
-  nav.classList.toggle('active');
-
-  // Toggle the icon
-  if (icon.classList.contains('fa-bars')) {
-    icon.classList.replace('fa-bars', 'fa-xmark');
-  } else {
-    icon.classList.replace('fa-xmark', 'fa-bars');
-  }
+hamburgerEL.addEventListener('click', () => {
+  navEL.classList.toggle('active');
+  // if (icon.classList.contains('fa-bars')) {
+  //   iconEl.classList.replace('fa-bars', 'fa-xmark');
+  // } else {
+  //   iconEl.classList.replace('fa-xmark', 'fa-bars');
+  // }
 });
 
     </script>
